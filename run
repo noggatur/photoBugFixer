@@ -1,0 +1,12 @@
+#!/bin/bash
+
+i=0
+
+for file in 7/*; do
+  if [[ $i -eq 0 ]]; then
+    mv $file "$file.jpg"
+  else
+    mv $file "$file.cr2"
+  fi
+  i=$((1-$i));
+done
